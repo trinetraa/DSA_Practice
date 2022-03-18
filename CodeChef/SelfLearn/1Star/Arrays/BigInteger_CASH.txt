@@ -1,0 +1,31 @@
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+import java.math.BigInteger;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int test = sc.nextInt();
+		while(test-->0){
+		    String nums = sc.next();
+		    String kay = sc.next();
+		    BigInteger n = new BigInteger(nums);
+		    BigInteger k = new BigInteger(kay);
+		    BigInteger sum = BigInteger.ZERO;
+		    for(BigInteger i = BigInteger.ZERO; i.compareTo(n)<0; i = i.add(BigInteger.ONE)){
+		        String num = sc.next();
+		        BigInteger NUM = new BigInteger(num);
+		        sum = sum.add(NUM);
+		    }
+		    System.out.println(sum.mod(k));
+
+		}
+	}
+}
