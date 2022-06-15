@@ -12,8 +12,14 @@ class GFG {
 		while(t-->0){
 		    int n = sc.nextInt();
 		    int[] arr = new int[n];
-		    for(int i=n-1; i>=0; i--){
+		    for(int i=0; i<n; i++){
 		        arr[i] = sc.nextInt();
+		    }
+		    
+		    for(int k=0; k<n/2; k++){
+		        arr[k] += arr[n-1-k];
+		        arr[n-1-k] = arr[k] - arr[n-1-k];
+		        arr[k] = arr[k] - arr[n-1-k];
 		    }
 		    
 		    for(int j=0; j<n; j++){
